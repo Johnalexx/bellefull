@@ -5,8 +5,11 @@ export const MealItem = ({data}) => {
   console.log(data)
   return (
     <>
+        {
+
+        }
         <div className="card">
-            <img src={Jolof} alt=""/>
+            <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg" alt=""/>
             <h3>Spicy Jollof Rice</h3>
         </div>
     </>
