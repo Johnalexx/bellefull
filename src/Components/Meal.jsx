@@ -14,6 +14,10 @@ const Meal=()=> {
             setShow(true);
         })
     },[url])
+
+    const setIndex=(alpha)=>{
+        changeUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`)
+    }
     return(
         <>
             <div className="main">
@@ -29,9 +33,9 @@ const Meal=()=> {
                         show ? <MealItem data={meal}/> : "Not Found" 
                    }
                 </div>
-                {/* <div className="indexContainer">
-                    <RecipeIndex/>
-                </div> */}
+                <div className="indexContainer">
+                    <RecipeIndex alphaIndex={(alpha)=>setIndex(alpha)}/>
+                </div>
             </div>
         </>
     )
