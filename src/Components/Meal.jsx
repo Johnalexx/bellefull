@@ -4,7 +4,7 @@ import MealItem from './MealItem';
 import RecipeIndex from './RecipeIndex';
 
 const Meal=()=> {
-    const [url,changeUrl]=useState("the_api");
+    const [url,changeUrl]=useState("https:/www.themealdb.com/api/json/v1/1/search.php?f=a");
     const [meal,changeMeal]=useState();
     const [show, setShow]=useState(false);
     useEffect(()=>{
@@ -25,12 +25,9 @@ const Meal=()=> {
                     <input type="search" className="search-bar" />
                 </div>
                 <div className="container">
-                    <MealItem/>
-                    <MealItem/>
-                    <MealItem/>
-                    <MealItem/>
-                    <MealItem/>
-                    <MealItem/>
+                   { 
+                        show ? <MealItem data={meal}/> : "Not Found" 
+                   }
                 </div>
                 {/* <div className="indexContainer">
                     <RecipeIndex/>

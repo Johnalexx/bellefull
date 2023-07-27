@@ -1,7 +1,8 @@
 import React from 'react'
 import Jolof from './Image/Foo1.png';
 
-export const MealItem = () => {
+export const MealItem = ({data}) => {
+  console.log(data)
   return (
     <>
         <div className="card">
