@@ -10,7 +10,7 @@ const RecipeIndex = (alphaIndex) => {
             alpha.map(meal=>{
                 return(
                     <div className="numBox" key={num++} onClick={()=>alphaIndex(meal)}>
-                        <h3>{item}</h3>
+                        <h3>{meal}</h3>
                     </div>
                 )
             })
