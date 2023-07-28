@@ -1,22 +1,22 @@
-import React from 'react'
+import React from 'react';
 import Jolof from './Image/Foo1.png';
 
-export const MealItem = ({ data }) => {
+const MealItem = ({ data }) => {
   console.log(data)
   return (
     <>
         {
-            (!data) ? "Not Found" : data.map(meal=> {
-              <div className="card">
-                <img src={meal.strMealThumb} alt=""/>
-                <h3>{meal.strMeal}</h3>
-              </div>
+            (!data) ? "Not Found" : data.map(meal => {
+              return(
+                <div className="card">
+                  <img src={meal.strMealThumb} alt=""/>
+                  <h3>{meal.strMeal}</h3>
+                </div>
+              )
             })
         }
-       
     </>
   )
-
 }
 
 export default MealItem;

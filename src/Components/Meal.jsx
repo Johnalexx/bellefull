@@ -7,10 +7,11 @@ const Meal=()=> {
     const [url,changeUrl]=useState("https:/www.themealdb.com/api/json/v1/1/search.php?f=a");
     const [meal,changeMeal]=useState();
     const [show, setShow]=useState(false);
+    const [search, setSearch]=useState("")
     useEffect(()=>{
         fetch(url).then(res=>res.json()).then(data=>{
-            console.log(data);
-            changeMeal(data);
+            console.log(data.meals);
+            changeMeal(data.meals);
             setShow(true);
         })
     },[url])
@@ -18,6 +19,13 @@ const Meal=()=> {
     const setIndex=(alpha)=>{
         changeUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`)
     }
+
+    const searchRecipe=(evt)=>{
+        if(evt.key=="Enter"){
+            changeUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+        }
+    }
+
     return(
         <>
             <div className="main">
@@ -26,7 +34,8 @@ const Meal=()=> {
                     <h4>Bruhhh</h4>
                 </div>
                 <div className="searchBox">
-                    <input type="search" className="search-bar" />
+                    <input type="search" className="search-bar" 
+                    onChange={e=>setSearch(e.target.value)} onKeyPress={searchRecipe}/>
                 </div>
                 <div className="container">
                    { 
