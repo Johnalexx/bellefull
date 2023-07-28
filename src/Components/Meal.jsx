@@ -32,6 +32,7 @@ const Meal=()=> {
                 <div className="heading">
                     <h1>Search your Meal Recipe</h1>
                     <h4>Bruhhh</h4>
+                    <h3 className="infoo">Please search Meal (some functions not working yet)</h3>
                 </div>
                 <div className="searchBox">
                     <input type="search" className="search-bar" 
