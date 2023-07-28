@@ -21,11 +21,11 @@ const Recipe = () => {
         <>
             {
                 (!meal) ? "" : <div className="content">
-                    <img src={meal.strMealThumb} alt="" />
+                    <img src={meal.strMealThumb} alt="" className="mealImgBg"/>
                     <div className="inner-content">
                         <h1>{meal.strMeal}</h1>
                         <h2>{meal.strArea} Food</h2>
-                        <h3>Category {meal.strCategory}</h3>
+                        <h3 className="mealCat">Category: {meal.strCategory}</h3>
                     </div>
                 
                     <div className="recipe-details">
