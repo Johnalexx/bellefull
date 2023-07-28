@@ -45,7 +45,7 @@ const Recipe = () => {
                             <h4>{meal.strInstructions}</h4>
                         </div>
                     </div>
-                    <div className="video">
+                     {/*<div className="video">
                        
                             {/* setVurl(meal.strYoutube)
                                 //const str=meal.strYoutube.split("=");
@@ -53,11 +53,11 @@ const Recipe = () => {
                                 //state="hj"    */}
                        
                        
-                        <iframe width="
+                     {/*    <iframe width="
                         100%" height="515" title="recipeVideo"
                             src={`https://www.youtube.com/embed/${id}`}>
                         </iframe>
-                    </div>
+                            </div> */}
 
                 </div>
             }
